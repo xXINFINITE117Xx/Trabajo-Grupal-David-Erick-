@@ -10,7 +10,7 @@ commentTextarea.addEventListener('input', function() {
     counterElement.textContent = 255 - charCount;
   });
 // 2. Convierta la cadena de texto entregada a minúsculas e imprima por consola la salida.
-
+console.log(msg.toLowerCase())
 // 3. Si la cadena contiene la palabra filtro en algú lado imprima un mensaje por consola con el valor true.
 commentTextarea.addEventListener('input', function() {
     const commentText = this.value.toLowerCase();
@@ -21,7 +21,11 @@ commentTextarea.addEventListener('input', function() {
   });
 // 4. Extrae la palabra "ejercicios" del mensaje entregado.
 // imprime por consola
-
+if (msg.includes('ejercicios')===true){
+  console.log('ejercicios');
+}else {
+  console.log('esta palabra no se encuentra en la cadena de texto');
+}
 // 5. Reemplaza los espacio por el caracter "-" e imprime el resultado final.
 submitCommentButton.addEventListener('click', function() {
     const commentText = commentTextarea.value;
